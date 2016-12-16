@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+require('../')({
+  downloadDir: process.argv[2] || '/tmp'
+})
+  .then(download => console.log(`Downloaded to ${ download.downloadDir }`))
+  .catch(e => console.error(e));
